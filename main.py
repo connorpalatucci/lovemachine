@@ -27,8 +27,8 @@ holdTime     = 4     # Duration for button hold (shutdown)
 tapTime      = 0.01  # Debounce time for button taps
 lastId       = '1'   # State information passed to/from interval script
 printer      = Adafruit_Thermal("/dev/serial0", 19200, timeout=5)
-
 poem = writePoem()
+println(poem)
 
 
 # Called when button is briefly tapped.  Invokes time/temperature script.
