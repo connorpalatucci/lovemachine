@@ -33,6 +33,7 @@ print(poem)
 
 # Called when button is briefly tapped.  Invokes time/temperature script.
 def tap():
+  global poem
   GPIO.output(ledPin, GPIO.HIGH)  # LED on while working
   print("buttion tapped")
   printer.println(poem)
