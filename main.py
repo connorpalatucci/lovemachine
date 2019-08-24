@@ -35,7 +35,7 @@ poem = writePoem()
 def tap():
   GPIO.output(ledPin, GPIO.HIGH)  # LED on while working
   print("buttion tapped")
-  printer.println(writePoem())
+  printer.println(poem)
   GPIO.output(ledPin, GPIO.LOW)
 
 
