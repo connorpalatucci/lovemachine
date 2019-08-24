@@ -28,6 +28,8 @@ tapTime      = 0.01  # Debounce time for button taps
 lastId       = '1'   # State information passed to/from interval script
 printer      = Adafruit_Thermal("/dev/serial0", 19200, timeout=5)
 
+poem = writePoem()
+
 
 # Called when button is briefly tapped.  Invokes time/temperature script.
 def tap():
@@ -61,7 +63,7 @@ GPIO.output(ledPin, GPIO.HIGH)
 
 # Processor load is heavy at startup; wait a moment to avoid
 # stalling during greeting.
-time.sleep(10)
+time.sleep(5)
 
 # Show IP address (if network is available)
 try:
@@ -122,7 +124,7 @@ while(True):
   # Pin 18 is PWM-capable and a "sleep throb" would be nice, but
   # the PWM-related library is a hassle for average users to install
   # right now.  Might return to this later when it's more accessible.
-  if ((int(t) & 1) == 0) and ((t - int(t)) < 0.15):
+  if ((int(t) & 1) == 0) and ((t - int(t)) < 0.5):
     GPIO.output(ledPin, GPIO.HIGH)
   else:
     GPIO.output(ledPin, GPIO.LOW)

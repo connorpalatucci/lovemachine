@@ -4,12 +4,13 @@ import os
 import random
 import datetime
 
-rawCorpusFile = 'corpus_raw.txt'
+#rawCorpusFile = 'corpus_raw.txt'
 cleanedCorpusFile = 'corpus_CLEANED.txt'
 
 #check if there is a cleaned corpus
-if not(os.path.isfile(cleanedCorpusFile)):
-	cleaner.cleanCorpus(rawCorpusFile, cleanedCorpusFile)
+#if not(os.path.isfile(cleanedCorpusFile)):
+    #print("Cleaning Corpus")
+	#cleaner.cleanCorpus(rawCorpusFile, cleanedCorpusFile)
 
 # Get corpus as string.
 with open(cleanedCorpusFile) as f:
