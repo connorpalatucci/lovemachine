@@ -36,6 +36,8 @@ def tap():
   GPIO.output(ledPin, GPIO.HIGH)  # LED on while working
   print("buttion tapped")
   printer.println(poem)
+  printer.feed(3)
+  printer.println("#harryandelleyloveeachoterverymuch")
   poem = writePoem()
   GPIO.output(ledPin, GPIO.LOW)
 
@@ -64,7 +66,7 @@ GPIO.output(ledPin, GPIO.HIGH)
 
 # Processor load is heavy at startup; wait a moment to avoid
 # stalling during greeting.
-time.sleep(5)
+time.sleep(10)
 
 # Show IP address (if network is available)
 try:
