@@ -1,6 +1,3 @@
-import nltk
-from nltk import word_tokenize
-from nltk.corpus import brown
 import string
 import re
 import os
