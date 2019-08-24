@@ -19,6 +19,7 @@ import RPi.GPIO as GPIO
 import subprocess, time, socket
 from PIL import Image
 from Adafruit_Thermal import *
+from poet import *
 
 ledPin       = 18
 buttonPin    = 23
@@ -31,14 +32,15 @@ printer      = Adafruit_Thermal("/dev/serial0", 19200, timeout=5)
 # Called when button is briefly tapped.  Invokes time/temperature script.
 def tap():
   GPIO.output(ledPin, GPIO.HIGH)  # LED on while working
-  subprocess.call(["python", "timetemp.py"])
+  print("buttion tapped")
+  printer.println(writePoem())
   GPIO.output(ledPin, GPIO.LOW)
 
 
 # Called when button is held down.  Prints image, invokes shutdown process.
 def hold():
   GPIO.output(ledPin, GPIO.HIGH)
-  printer.printImage(Image.open('gfx/goodbye.png'), True)
+  #printer.printImage(Image.open('gfx/goodbye.png'), True)
   printer.feed(3)
   subprocess.call("sync")
   subprocess.call(["shutdown", "-h", "now"])
