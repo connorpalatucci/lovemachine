@@ -36,6 +36,7 @@ def tap():
   GPIO.output(ledPin, GPIO.HIGH)  # LED on while working
   print("buttion tapped")
   printer.println(poem)
+  poem = writePoem()
   GPIO.output(ledPin, GPIO.LOW)
 
 
