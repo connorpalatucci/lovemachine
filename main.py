@@ -76,7 +76,14 @@ try:
 	s.connect(('8.8.8.8', 0))
 	printer.print('My IP address is ' + s.getsockname()[0])
 	printer.feed(3)
-
+except:
+	printer.boldOn()
+	printer.println('Network is unreachable.')
+	printer.boldOff()
+	printer.print('Connect display and keyboard\n'
+	  'for network troubleshooting.')
+	printer.feed(3)
+	
 # Print greeting image
 #printer.printImage(Image.open('gfx/hello.png'), True)
 printer.feed(3)
