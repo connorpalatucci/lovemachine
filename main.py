@@ -43,10 +43,10 @@ def tap():
   import qrPY as qr
   print(str(qr.width))
   print(str(qr.height))
-  print(str(qr.data))
+  #print(str(qr.data))
   printer.printBitmap(qr.width, qr.height, qr.data)
   printer.feed(4)
-  
+
   poem = writePoem()
   GPIO.output(ledPin, GPIO.LOW)
 
