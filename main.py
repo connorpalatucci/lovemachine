@@ -44,7 +44,7 @@ def tap():
   printer.println("Adafruit!")
   printer.feed(2)
 
-  import qr as qr
+  import qrPY as qr
   print(str(qr.width))
   print(str(qr.height))
   print(str(qr.data))
