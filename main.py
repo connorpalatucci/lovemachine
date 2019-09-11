@@ -38,7 +38,10 @@ def tap():
   print("buttion tapped")
   printer.println(poem)
   printer.feed(1)
-  printer.println("#harryandelleyloveeachoterverymuch")
+
+  import qr as qr
+  printer.printBitmap(qr.width, qr.height, qr.data)
+  printer.println("Lovebot-3000")
   printer.feed(4)
   poem = writePoem()
   GPIO.output(ledPin, GPIO.LOW)
