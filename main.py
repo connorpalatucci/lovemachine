@@ -39,10 +39,10 @@ def tap():
   printer.println(poem)
   printer.feed(1)
 
-import gfx.adaqrcode as adaqrcode
-printer.printBitmap(adaqrcode.width, adaqrcode.height, adaqrcode.data)
-printer.println("Adafruit!")
-printer.feed(2)
+  import gfx.adaqrcode as adaqrcode
+  printer.printBitmap(adaqrcode.width, adaqrcode.height, adaqrcode.data)
+  printer.println("Adafruit!")
+  printer.feed(2)
 
   import qr as qr
   print(str(qr.width))
