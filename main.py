@@ -37,16 +37,16 @@ def tap():
   GPIO.output(ledPin, GPIO.HIGH)  # LED on while working
   print("buttion tapped")
   printer.println(poem)
-  printer.feed(2)
+  printer.feed(1)
   printer.println("Lovebot-3000")
 
   import qrPY as qr
   print(str(qr.width))
   print(str(qr.height))
   #print(str(qr.data))
+  time.sleep(5)
   printer.printBitmap(qr.width, qr.height, qr.data)
   printer.feed(4)
-
   poem = writePoem()
   GPIO.output(ledPin, GPIO.LOW)
 
