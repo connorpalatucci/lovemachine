@@ -39,6 +39,7 @@ def tap():
   printer.println(poem)
   printer.feed(1)
   printer.println("Lovebot-3000")
+  printer.feed(1)
 
   import qrPY as qr
   print(str(qr.width))
