@@ -45,7 +45,6 @@ def tap():
   print(str(qr.height))
   #print(str(qr.data))
   printer.printBitmap(qr.width, qr.height, qr.data)
-  time.sleep(2)
   printer.feed(4)
 
   poem = writePoem()
