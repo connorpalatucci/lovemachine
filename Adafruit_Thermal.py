@@ -134,7 +134,7 @@ class Adafruit_Thermal(Serial):
 			  18, # DC2
 			  35, # Print density
 			  (printBreakTime << 5) | printDensity)
-			self.dotPrintTime = 0.1
+			self.dotPrintTime = 0.2
 			self.dotFeedTime  = 0.0021
 		else:
 			self.reset() # Inits some vars
