@@ -51,7 +51,9 @@ def tap():
   printer.timeoutWait()
   print("printing bitmap at:  " + str(datetime.datetime.now().time()))
   printer.printBitmap(qr.width, qr.height, qr.data)
+  print("feeding at:  " + str(datetime.datetime.now().time()))
   printer.feed(4)
+  print("fwriting poem at:  " + str(datetime.datetime.now().time()))
   poem = writePoem()
   GPIO.output(ledPin, GPIO.LOW)
 
