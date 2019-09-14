@@ -40,13 +40,16 @@ def tap():
   printer.feed(1)
   printer.println("Lovebot-3000")
   printer.feed(1)
+  print("text printed at:  " + str(datetime.datetime.now().time()))
 
   import qrPY as qr
   print(str(qr.width))
   print(str(qr.height))
   #print(str(qr.data))
+  print("Waiting at:  " + str(datetime.datetime.now().time()))
   printer.timeoutSet(1)
   printer.timeoutWait()
+  print("printing bitmap at:  " + str(datetime.datetime.now().time()))
   printer.printBitmap(qr.width, qr.height, qr.data)
   printer.feed(4)
   poem = writePoem()
