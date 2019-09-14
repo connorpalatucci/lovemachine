@@ -41,7 +41,7 @@ import sys
 class Adafruit_Thermal(Serial):
 
 	resumeTime      =   0.0
-	byteTime        =   10
+	byteTime        =   0
 	dotPrintTime    =   0
 	dotFeedTime     =   0.0
 	prevByte        =  '\n'
