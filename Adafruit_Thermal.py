@@ -42,7 +42,7 @@ class Adafruit_Thermal(Serial):
 
 	resumeTime      =   0.0
 	byteTime        =   0.0
-	dotPrintTime    =   0.0
+	dotPrintTime    =   1
 	dotFeedTime     =   0.0
 	prevByte        =  '\n'
 	column          =     0
@@ -51,7 +51,7 @@ class Adafruit_Thermal(Serial):
 	lineSpacing     =     8
 	barcodeHeight   =    50
 	printMode       =     0
-	defaultHeatTime =    10
+	defaultHeatTime =    60
 	firmwareVersion =   268
 	writeToStdout   = False
 
