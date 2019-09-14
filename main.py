@@ -49,7 +49,7 @@ def tap():
   print("Waiting at:  " + str(datetime.datetime.now().time()))
   printer.timeoutSet(5)
   printer.timeoutWait()
-    print("printing bitmap at:  " + str(datetime.datetime.now().time()))
+  print("printing bitmap at:  " + str(datetime.datetime.now().time()))
   printer.printBitmap(qr.width, qr.height, qr.data)
   print("feeding at:  " + str(datetime.datetime.now().time()))
   printer.timeoutSet(0)
